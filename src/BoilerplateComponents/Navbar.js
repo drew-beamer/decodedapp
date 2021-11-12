@@ -12,14 +12,17 @@ export default function Navbar() {
   return (
       <Box sx={{ flexGrow: 1 }}>
         <ThemeProvider theme={theme}>
-          <AppBar color="primary" position="static">
+          <AppBar style={{background: theme.palette.primary.mainGradient}} position="static">
             <Toolbar>
-            <img src={logo} style={{height: "50px", padding:"5px 0px"}}/>
+            <img src={logo} style={{height: "30px", padding:"5px 0px"}}/>
               <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               </Typography>
               <Button color="inherit" onClick={() => {
-                  window.location = "/"
+                  window.location = "/decodedapp"
               }}>Home</Button>
+              <Button color="inherit" onClick={() => {
+                  window.location = "/decodedapp/rankings"
+              }}>Rankings</Button>
             </Toolbar>
           </AppBar>
         </ThemeProvider>

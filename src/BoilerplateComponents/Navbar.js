@@ -18,10 +18,10 @@ export default function Navbar() {
               <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               </Typography>
               <Button color="inherit" onClick={() => {
-                  window.location = "/decodedapp"
+                  window.location = "/decodedapp/"
               }}>Home</Button>
               <Button color="inherit" onClick={() => {
-                  window.location = "/decodedapp/rankings"
+                  window.location = "/decodedapp/#/rankings"
               }}>Rankings</Button>
             </Toolbar>
           </AppBar>

@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/decodedapp/static/css/main.97e74dd4.chunk.css",
+    "main.js": "/decodedapp/static/js/main.e86e7ea1.chunk.js",
+    "main.js.map": "/decodedapp/static/js/main.e86e7ea1.chunk.js.map",
+    "runtime-main.js": "/decodedapp/static/js/runtime-main.b1874874.js",
+    "runtime-main.js.map": "/decodedapp/static/js/runtime-main.b1874874.js.map",
+    "static/js/2.a857e3b1.chunk.js": "/decodedapp/static/js/2.a857e3b1.chunk.js",
+    "static/js/2.a857e3b1.chunk.js.map": "/decodedapp/static/js/2.a857e3b1.chunk.js.map",
+    "static/js/3.c715541c.chunk.js": "/decodedapp/static/js/3.c715541c.chunk.js",
+    "static/js/3.c715541c.chunk.js.map": "/decodedapp/static/js/3.c715541c.chunk.js.map",
+    "index.html": "/decodedapp/index.html",
+    "static/css/main.97e74dd4.chunk.css.map": "/decodedapp/static/css/main.97e74dd4.chunk.css.map",
+    "static/js/2.a857e3b1.chunk.js.LICENSE.txt": "/decodedapp/static/js/2.a857e3b1.chunk.js.LICENSE.txt",
+    "static/media/logo.8883b168.png": "/decodedapp/static/media/logo.8883b168.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b1874874.js",
+    "static/js/2.a857e3b1.chunk.js",
+    "static/css/main.97e74dd4.chunk.css",
+    "static/js/main.e86e7ea1.chunk.js"
+  ]
+}

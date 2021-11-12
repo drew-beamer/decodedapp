@@ -7,20 +7,22 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { Typography } from '@mui/material';
+import a10Ranks from "../Data/a10ranks";
 
-
-const a10Ranks = [
-    "St. Bonaventure","VCU","Richmond","Davidson","Dayton",
-    "Saint Louis","Rhode Island","Massachusetts","George Mason",
-    "Duquesne","La Salle","Saint Joseph's","George Washington","Fordham"
-]
-
-const rows = a10Ranks.map((team, index) => {
+const teamData = a10Ranks();
+console.log(teamData)
+const rows = teamData.map((data, index) => {
+    data = data.split("\t")
     return <TableRow key={index}>
-        <TableCell align="left">{index+1}</TableCell>
-        <TableCell align="left">{team}</TableCell>
+        <TableCell align="left">{data[0]}</TableCell>
+        <TableCell align="left">{data[1]}</TableCell>
+        <TableCell align="left">{data[2]}</TableCell>
+        <TableCell align="left">{data[3]}</TableCell>
+        <TableCell align="left">{data[4]}</TableCell>
     </TableRow>
 });
+
+
 
 export default function Index() {
     return (<div>
@@ -34,6 +36,9 @@ export default function Index() {
                         <TableRow>
                             <TableCell align="left">(Rank)</TableCell>
                             <TableCell align="left">Team</TableCell>
+                            <TableCell align="left">Elo</TableCell>
+                            <TableCell align="left">Average AdjEm</TableCell>
+                            <TableCell align="left">Score</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>

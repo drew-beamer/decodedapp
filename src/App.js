@@ -10,7 +10,7 @@ export default function App() {
       </div>
       <Router>
         <Routes>
-          <Route path="/" element={<Index />} />
+          <Route path="/decodedapp" element={<Index />} />
         </Routes>
       </Router>
     </div>

@@ -10,7 +10,6 @@ import { Typography } from '@mui/material';
 import a10Ranks from "../Data/a10ranks";
 
 const teamData = a10Ranks();
-console.log(teamData)
 const rows = teamData.map((data, index) => {
     data = data.split("\t")
     return <TableRow key={index}>
@@ -21,8 +20,6 @@ const rows = teamData.map((data, index) => {
         <TableCell align="left">{data[4]}</TableCell>
     </TableRow>
 });
-
-
 
 export default function Index() {
     return (<div>

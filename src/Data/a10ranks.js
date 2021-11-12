@@ -13,5 +13,5 @@ export default function ranks() {
     12	Saint Joseph's	1430	-3.847772873	17 \
     13	George Washington	1413	-4.860330351	10 \
     14	Fordham	1317	-8.057106409	0"
-    return data.split("    ");
+    return data.split("     ");
 }

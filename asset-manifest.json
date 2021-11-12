@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/decodedapp/static/css/main.a9c63679.chunk.css",
-    "main.js": "/decodedapp/static/js/main.df736a2e.chunk.js",
-    "main.js.map": "/decodedapp/static/js/main.df736a2e.chunk.js.map",
+    "main.js": "/decodedapp/static/js/main.8951c61c.chunk.js",
+    "main.js.map": "/decodedapp/static/js/main.8951c61c.chunk.js.map",
     "runtime-main.js": "/decodedapp/static/js/runtime-main.36f7a158.js",
     "runtime-main.js.map": "/decodedapp/static/js/runtime-main.36f7a158.js.map",
     "static/js/2.1c8fecab.chunk.js": "/decodedapp/static/js/2.1c8fecab.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.36f7a158.js",
     "static/js/2.1c8fecab.chunk.js",
     "static/css/main.a9c63679.chunk.css",
-    "static/js/main.df736a2e.chunk.js"
+    "static/js/main.8951c61c.chunk.js"
   ]
 }

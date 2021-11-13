@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useEffect } from 'react';
 import { Grid, Typography } from '@mui/material';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -11,19 +12,37 @@ import { Box } from '@mui/system';
 import a10Ranks from "../Data/a10ranks";
 import theme from "../theme.js"
 
-const teamData = a10Ranks();
-const rows = teamData.map((data, index) => {
-    data = data.split("\t")
-    return <TableRow key={index}>
-        <TableCell align="left"><Typography>{data[0]}</Typography></TableCell>
-        <TableCell align="left"><Typography>{data[1]}</Typography></TableCell>
-        <TableCell align="left"><Typography>{data[2]}</Typography></TableCell>
-        <TableCell align="left"><Typography>{data[3]}</Typography></TableCell>
-        <TableCell align="left"><Typography>{data[4]}</Typography></TableCell>
-    </TableRow>
-});
+
+
+
 
 export default function Rankings() {
+    const [teamData, setTeamData] = React.useState([])
+
+    useEffect(() => {
+        // Parsed Format
+        fetch("https://sheet.best/api/sheets/7bfc493a-ce03-48aa-91bf-b9ca28369d25")
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data);
+                setTeamData(data);
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    }, []);
+
+    const rows = teamData.map((data, index) => {
+        return <TableRow key={index}>
+            <TableCell align="left"><Typography variant="p">{data['Rank']}</Typography></TableCell>
+            <TableCell align="left"><Typography variant="p">{data['A10 Teams']}</Typography></TableCell>
+            <TableCell align="left"><Typography variant="p">{data['Elo']}</Typography></TableCell>
+            <TableCell align="left"><Typography variant="p">{data['AdjEm']}</Typography></TableCell>
+            <TableCell align="left"><Typography variant="p">{data['Score']}</Typography></TableCell>
+        </TableRow>
+      });
+
+
     return (<Grid container spacing={0} style={{height: "100vh", background: theme.palette.primary.mainGradient}}>
             <Grid item sm={6}  className="content-box" >
                 <Box>
@@ -42,7 +61,7 @@ export default function Rankings() {
                                         <TableCell align="left"><Typography variant="p">(TEAM)</Typography></TableCell>
                                         <TableCell align="left"><Typography variant="p">(ELO)</Typography></TableCell>
                                         <TableCell align="left"><Typography variant="p">(WAVG ADJEM)</Typography></TableCell>
-                                        <TableCell align="left">(SCORE)</TableCell>
+                                        <TableCell align="left"><Typography variant="p">(SCORE)</Typography></TableCell>
                                     </TableRow>
                                 </TableHead>
                                 <TableBody>
